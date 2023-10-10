@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="main">
+
+<insert id="write" parameterType="MainDTO">
+		INSERT INTO twitter(mid, tlike, tdate, twrite, tnick)
+		VALUES((SELECT mid
+		FROM member WHERE
+		mid=#{mid}), #{tlike}, #{tdate}, #{twrite}, #{tnick})
+
+</insert>
+
+<select id="mainList" parameterType="MainDTO" resultType="MainDTO">
+SELECT *
+FROM twitter
+WHERE tdel = 1
+ORDER BY tno desc
+
+</select>
+
+<select id="detail2" parameterType="Integer" resultType="Map">
+
+SELECT *
+FROM twitter
+WHERE tno=#{tno}
+
+</select>
+
+<update id="delete" parameterType="MainDTO">
+update twitter SET tdel = 0 WHERE
+		tno=#{tno} AND mid=#{mid}
+</update>
+
+<update id="edit" parameterType="MainDTO">
+		UPDATE twitter SET
+		twrite=#{twrite} WHERE tno=#{tno} AND mid=#{mid}
+	</update>
+
+<update id="likeup" parameterType="Integer">
+UPDATE twitter 
+SET tlike=tlike + 1
+where tno=#{tno}
+
+
+</update>
+
+<update id="hateup" parameterType="Integer">
+UPDATE twitter 
+SET thate=thate + 1
+where tno=#{tno}
+
+
+</update>
+
+	<select id="commentList" parameterType="Integer" resultType="Map">
+		SELECT * FROM commentview WHERE tno=#{tno } 
+	</select>
+	
+	<update id="cdel" parameterType="Map">
+	UPDATE comment SET cdel=0
+	WHERE tno=#{tno } AND cno=#{cno } AND mno = (SELECT mno FROM member WHERE mid=#{mid })
+
+	</update>
+	
+	<update id="cedit" parameterType="Map">
+		UPDATE comment SET c_comment=#{recomment }
+		WHERE tno=#{tno } AND cno=#{cno } AND mno = (SELECT mno FROM member WHERE mid=#{mid }) 
+	</update>
+	
+
+
+
+
+</mapper>

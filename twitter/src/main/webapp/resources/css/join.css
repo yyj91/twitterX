@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+#mid:focus {
+  outline:red;
+}
+
+            
+ #mid:focus{
+    border-color: blue;
+    outline: none;
+}
+
+
+ #mpw:focus{
+    border-color: blue;
+    outline: none;
+}
+
+
+ #mname:focus{
+    border-color: blue;
+    outline: none;
+}
+
+ #mpn:focus{
+    border-color: blue;
+    outline: none;
+}
+
+
+ #tnick:focus{
+    border-color: blue;
+    outline: none;
+}
+
+
+
+

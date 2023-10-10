@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.container {
+    display: flex;
+}
+
+.left-menu {
+    width: 250px;
+
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+
+}

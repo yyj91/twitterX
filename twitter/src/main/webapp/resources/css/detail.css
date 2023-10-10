@@ -1,0 +1,116 @@
+@charset "UTF-8";
+#main{
+   margin: 0 auto;
+   width:95%;
+   margin-top: 60px;
+   color: black;
+}
+#detail{
+   background-color: white;
+   margin: 0 auto;
+   width: 90%;
+   height: auto;
+   margin-top: 15px;
+   color: black;
+   padding: 10px;
+   box-sizing: border-box;
+}
+#detailH{
+   height: 40px;
+   line-height: 40px;
+   font-size: x-large;
+   border-bottom: 1px solid black;
+   box-sizing: border-box;
+   overflow: hidden;
+}
+#detailIdDate{
+   height: 50px;
+   line-height: 30px;
+   background-color: #D3D3D3;
+   border-bottom: 1px gray solid;
+   padding:10px;
+   box-sizing: border-box;
+}
+#detailID, #detailDate{
+   width: 45%;
+   float: left;
+   text-align: left;
+}
+#detailDate{
+   float: right;
+   text-align: right;
+}
+#detailContent{
+   padding:10px;
+   min-height:300px;
+   height: auto;
+   border-bottom: 1px solid white;
+   box-sizing: border-box;
+   text-align: left;
+}
+.commentList{
+	width: 100%;
+	height: auto;
+	margin: 5px 0px;
+	/* border-top: 10px solid white; */
+}
+.comment{
+	width: 100%;
+	height: auto;
+	margin: 5px 0px;	
+}
+
+.comments{
+	width: 100%;
+	min-height: 65px;
+	margin-bottom: 5px;
+}
+.commentHead{
+	width: 100%;
+	height: 32px;
+	line-height:32px;
+	background-color: #f1f1f1;
+}
+.cname{
+	width: 45%;
+	height: 100%;
+	float: left;
+	padding-left: 5px;
+}
+.cdate{
+	width: 45%;
+	height: 100%;
+	float: right;
+	text-align: right;
+	margin-right: 10px;
+}
+.cid{
+	height:0px;
+	visibility: hidden;
+}
+.commentBody{
+	width: 100%;
+	min-height: 35px;
+	height: auto;
+	padding : 5px 0px 0px 5px;
+}
+
+.commentBox, .recommentBox{
+	width: 100%;
+	min-height: 150px;
+	height: auto;
+	padding: 10px;
+	background-color: white;
+	box-sizing: border-box;
+}
+#commenttextarea, #rcta{
+	width: calc(100% - 110px);
+	height: 120px;
+	float: left;
+	resize: none;
+}
+#comment, #recomment{
+	width: 100px;
+	height: 130px;	
+	float: right;
+}

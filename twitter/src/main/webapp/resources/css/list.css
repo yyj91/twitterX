@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.member-table {
+    width: 70%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+.member-table th, .member-table td {
+    padding: 7px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.member-titile {
+	background-color: #ccc;
+}
